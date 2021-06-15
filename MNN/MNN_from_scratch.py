@@ -39,20 +39,20 @@ class MNN(nn.Module):
         torch.nn.init.kaiming_uniform_(self.B1)
         self.B1.requires_grad_()
         
-        self.U2 = torch.nn.Parameter( torch.empty([hidden_dim2_r, hidden_dim_r])  ) #Shape = [output_dim_r, hidden_dim_r]
+        self.U2 = torch.nn.Parameter( torch.empty([hidden_dim2_r, hidden_dim_r])  ) #Shape = [hidden_dim2_r, hidden_dim_r]
         torch.nn.init.kaiming_uniform_(self.U2)               
         self.U2.requires_grad_()
-        self.V2 = torch.nn.Parameter( torch.empty([hidden_dim_c, hidden_dim2_c])  ) #Shape = [hidden_dim_c, output_dim_c]
+        self.V2 = torch.nn.Parameter( torch.empty([hidden_dim_c, hidden_dim2_c])  ) #Shape = [hidden_dim_c, hidden_dim2_c]
         torch.nn.init.kaiming_uniform_(self.V2)
         self.V2.requires_grad_()
-        self.B2 = torch.nn.Parameter( torch.empty([hidden_dim2_r,hidden_dim2_c])  ) #Shape = [output_dim_r, output_dim_c]
+        self.B2 = torch.nn.Parameter( torch.empty([hidden_dim2_r,hidden_dim2_c])  ) #Shape = [hidden_dim2_r, hidden_dim2_c]
         torch.nn.init.kaiming_uniform_(self.B2)
         self.B2.requires_grad_()       
         
-        self.U3 = torch.nn.Parameter( torch.empty([output_dim_r, hidden_dim2_r])  ) #Shape = [output_dim_r, hidden_dim_r]
+        self.U3 = torch.nn.Parameter( torch.empty([output_dim_r, hidden_dim2_r])  ) #Shape = [output_dim_r, hidden_dim2_r]
         torch.nn.init.kaiming_uniform_(self.U3)               
         self.U3.requires_grad_()
-        self.V3 = torch.nn.Parameter( torch.empty([hidden_dim2_c, output_dim_c])  ) #Shape = [hidden_dim_c, output_dim_c]
+        self.V3 = torch.nn.Parameter( torch.empty([hidden_dim2_c, output_dim_c])  ) #Shape = [hidden_dim2_c, output_dim_c]
         torch.nn.init.kaiming_uniform_(self.V3)
         self.V3.requires_grad_()
         self.B3 = torch.nn.Parameter( torch.empty([output_dim_r,output_dim_c])  ) #Shape = [output_dim_r, output_dim_c]
