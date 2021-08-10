@@ -1,6 +1,7 @@
 __pycache__
 *.pyc
-/data
+/data/datasets
+/images
 .vscode
 runs
 models

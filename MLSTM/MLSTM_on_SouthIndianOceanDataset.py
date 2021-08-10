@@ -9,8 +9,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #Replace the datafile address here accordingly 
-train_df = pd.read_csv(r'./data/south_indian_ocean_processedtrain1985-2001.txt', delimiter = ",", header = None, names =['id', 'date', 'longitude', 'latitude', 'speed']);
-test_df = pd.read_csv(r'./data/south_indian_ocean_processedtest2006-2013.txt', delimiter = ",", header = None, names =['id', 'date', 'longitude', 'latitude', 'speed']);
+train_df = pd.read_csv(r'./data/South_Indian_Ocean/south_indian_ocean_processedtrain1985-2001.txt', delimiter = ",", header = None, names =['id', 'date', 'longitude', 'latitude', 'speed']);
+test_df = pd.read_csv(r'./data/South_Indian_Ocean/south_indian_ocean_processedtest2006-2013.txt', delimiter = ",", header = None, names =['id', 'date', 'longitude', 'latitude', 'speed']);
  
 #The 2 lists below will be used for plotting the graphs
 act=[]                         
